@@ -1,0 +1,980 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0 auto;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+    line-height: 1;
+    font-family: 'Baloo Bhaina 2', cursive;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*
+==========================================================================
+                       HEADER
+==========================================================================
+*/
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.logo-bar{
+    display:flex;
+    align-items:center;
+    height: 55px;
+    text-align: center;
+    background-color: white;
+    border-bottom: 1px solid rgba(var(--b6a,219,219,219),1);
+    padding-bottom: 0px;
+    padding-top:0px;
+    padding-left: 10px;
+    padding-right: 200px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    margin-bottom: 0px;
+    
+}
+.logo-bar .logo{
+    width:40%;
+    padding-top:10px;
+    padding-bottom: 10px;
+    
+      }
+
+.logo-bar h1 {
+    color:black;
+    font-size:25px;
+    font-family: 'Kaushan Script', cursive;
+    vertical-align: middle;
+}
+a{
+    text-decoration: none;
+}
+.logo-bar .search{
+    width:20%;
+    height:50px;
+    padding-left:20px;
+    padding-top:10px;
+
+
+  }
+input[type=text]{
+    background-color:rgba(var(--b3f,250,250,250),1);
+    background-position: left;
+    text-align: center;
+    border-radius: 5px;
+    line-height: normal;
+    border: 1px solid rgba(var(--b6a,219,219,219),1);
+    height:30px;
+    width:220px;
+}
+input[type=text]:focus {
+    outline:none;
+}
+.logo-bar .nav{
+    width:30%;
+    height:50px;
+    padding-top:10px;
+
+}
+.logo-bar img{
+    height: 25px;
+    margin-right: 10px;
+    vertical-align: middle;
+    
+}
+.nav .profile{
+    border-radius:50%;
+}
+ul{
+    list-style-type:none;
+    margin:0;
+    padding:0;
+}
+li a{
+    display:inline;
+    float:right;
+}
+
+/*
+=================================================================================
+                                   MAIN CONTENT
+=================================================================================
+*/
+.main-content{
+    display:flex;
+    padding-left:160px;
+    padding-right:180px;
+    padding-top:30px;
+    margin-top:0px;
+    background-color:rgba(var(--b3f,250,250,250),1);
+    
+
+}
+.bold{
+    font-weight:700;
+}
+.grey{
+    color:#C0C0C0;
+    font-size:12px;
+    
+}
+  /*
+  =============================================================================
+                               TIMELINE POSTS
+  =============================================================================
+*/
+
+.timeline{
+
+    width:100%;
+    margin-right:20px;
+ 
+}
+.flex-container{
+    display:flex;
+    justify-content: flex-start;
+    height:60px;
+
+}
+.flex-container .profilepic {
+    margin-left: 10px;
+    margin-right:0px;
+    padding: 15px;
+     
+     }
+    .profilep{
+        width:30px;
+        height:30px;
+        border-radius: 50%;
+    }
+div .profilename{
+    display:block;
+    padding-top: 25px;
+    margin-left:0px;
+    font-weight: bold;
+
+}
+.flex-container .dropdown{
+    margin-right:10px;
+    align-self: center;
+}
+
+.dropbtn {
+   
+    color:black;
+    padding: 16px;
+    font-size: 12px;
+    border: none;
+    cursor: pointer;
+    margin-left:0px;
+  }
+  .dropbtn:hover, .dropbtn:focus {
+    background-color: none;
+
+  }
+  .dropdown{
+    position: relative;
+    display: inline-block;
+
+  }
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1000;
+  }
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    z-index: 1;
+  }
+.show {display:block;}
+
+hr {
+    border: 0;
+    clear:both;
+    display:block;
+    width: 100%;               
+    background-color:rgba(var(--b6a,219,219,219),1);
+    height: 1px;
+  }
+.post{
+    border:1px solid rgba(var(--b6a,219,219,219),1);
+    border-radius:5px;
+    width:100%;
+    height:870px;
+    background-color: white;
+    margin-bottom: 35px;
+
+    
+
+
+}
+.post1{
+    border:1px solid rgba(var(--b6a,219,219,219),1);
+    border-radius:5px;
+    width:100%;
+    height:830px;
+    background-color: white;
+    margin-bottom: 35px;
+    
+
+
+}
+
+.post-image{
+    width:100%;
+    height:600px;
+    margin-top:0px;
+    margin-bottom:0px;
+    background-color: darkseagreen;
+}
+/*====================================================================================
+                                   POST ICONS
+  ====================================================================================
+*/
+
+.post-icons{
+    display:flex;
+    align-items: stretch;
+    
+}
+.post-icons img{
+    width:30px;
+    margin-bottom:5px;
+    
+}
+.flag-icon{
+    margin-right:10px;
+}
+.comment-icon{
+    margin-left:10px;
+    margin-right:0px;
+    
+    
+}
+.likes-icon{
+    margin-left:10px;
+    margin-right:0px;
+}
+.dmessage-icon{
+    margin-left:10px;
+}
+.post-info{
+    line-height:1.5;
+    margin-left:10px;
+    
+}
+
+.timelapse{
+    color:#C0C0C0;
+    font-size:12px;
+    text-transform: uppercase;
+}
+.add-comment{
+    display:flex;
+    justify-content:space-between;
+}
+.add-comment input[type=text]{
+    border: none transparent;
+    outline: none;
+    height:45px;
+    background-color:white;
+    width:90%;
+    text-align:start;
+    padding-left:10px;
+  
+    
+}
+.add-comment p{
+    margin-right:10px;
+    padding-top:10px;
+    color:#b0e0e6
+}
+.hashtag{
+    color:#1DA1F2;
+}
+
+/*==============================================================================
+                                 ASIDE
+================================================================================
+*/
+                             
+.second-half{
+    width:300px;
+    height:800px;
+    position:-webkit-sticky;
+    position:sticky;
+    top: 40px;
+    margin-left:0px;
+    padding-left:0px;
+    z-index:0
+    
+    
+    
+  
+}
+.profile-id{
+    height:60px;
+    margin-bottom:20px;
+    
+} 
+.pro-id{
+    width:100px;
+}
+.display-image{
+    width:30px;
+}
+
+/*
+==============================================================================
+                                     TABLES
+=============================================================================
+*/
+table{
+    border-collapse:separate; 
+     border-spacing:0 15px; 
+ 
+     
+}
+
+.profile-id table{
+    height:100%;
+    width:300px;
+    margin-left:10px;
+}
+tr{
+   margin-bottom:5px;
+   
+
+}
+.display-image{
+    border-radius: 50%;
+    width:60px;
+    vertical-align: middle;
+    margin-left:10px;
+    
+
+}
+tr th{
+    height:10px;
+}
+
+/* ============================================================================
+                              Stories                                          
+===============================================================================                       
+*/
+.First-half{
+ 
+    width:60%;
+    margin-right:10px;
+}
+.scroll-stories{
+    height:120px;
+    background-color: white;
+    border: 1px solid rgba(var(--b6a,219,219,219),1);
+    border-radius:5px;
+    padding:10px;
+    margin-bottom:20px;
+    overflow-x:scroll;
+    overflow-y:hidden;
+    white-space:nowrap;
+    margin-right:0px;
+    
+}
+
+.scroll-item{
+    height:100px;
+    display:inline-block;
+    margin-right:10px;
+}
+
+.scroll-item img{
+    width:65px;
+    height:65px;
+    border-radius: 50%;
+    vertical-align: middle;
+    padding:2px;
+    border: 1px solid magenta;
+    margin-bottom:10px;
+}
+
+.scroll-item p{
+    text-align: center;
+    font-size: smaller;
+}
+.timelapse-story{
+    color:gray;
+    font-size:12px;
+}
+.name-timelapse{
+    width:300px;
+    vertical-align: middle;
+    padding-left:10px;
+
+}
+.bold-story{
+    font-size:14px;
+    font-weight: 700;
+}
+/*================================================================================
+                            FRIEND SUGGESTIONS
+==================================================================================
+*/
+.scroll{
+    height:200px;
+    margin-left:10px;
+    border-radius:5px;
+    padding:10px;
+    margin-bottom: 10px;
+    
+}
+.scrollbar{
+    height:180px;
+    overflow:auto;
+}
+.scroll .suggestions{
+    height:300px;
+    overflow-y: hidden;
+}
+.scroll .story-profile{
+    width:40px;
+    height:40px;
+    border-radius: 50%;
+    vertical-align: middle;
+    padding:2px;
+    border: 1px solid magenta;
+}
+.scrollbar th{
+    text-align: start;
+    font-size:14px;
+}
+
+.timelapse-story{
+    color:gray;
+    font-size:12px;
+}
+.name-timelapse-aside{
+    width:300px;
+    vertical-align: middle;
+
+}
+.name-timelapse{
+    width:300px;
+    vertical-align: middle;
+    padding-left:10px;
+
+}
+.bold-story{
+    font-size:14px;
+    font-weight: 700;
+}
+.name-src{
+    width:300px;
+    vertical-align: middle;
+    padding-left:10px;
+}
+.suggestions .follow-button{
+    color:#1DA1F2;
+    font-weight:700;
+    font-size:12px;
+    padding-right:0px;
+    text-align: end;
+    
+}
+/*================================================================================
+                            FOOTER                                                
+==================================================================================
+*/
+
+footer{
+    height:50px;
+    margin-top:130px;
+    padding-left:10px;
+}
+small{
+    font-size:11px;
+    color:#C0C0C0;
+    margin-left:15px;
+    text-align:justify;
+    
+}
+
+/*
+=============================================================================
+                                DIRECT MESSAGES
+=============================================================================
+*/
+.main-content2{
+    display:flex;
+    padding-left:90px;
+    padding-right:110px;
+    padding-top:20px;
+    margin-top:0px;
+    background-color:rgba(var(--b3f,250,250,250),1);
+    height:600px;
+    padding-bottom:10px;
+
+
+}
+.conversations{
+    border:1px solid rgba(var(--b6a,219,219,219),1);
+    border-radius:5px 0px 0px 5px;
+    margin-right:0px;
+    width:360px;
+    
+}
+.directm-header{
+    width: 80%;
+    padding-top:20px;
+    padding-left:160px;
+    font-weight:700;
+}
+.new-messages-icon{
+    margin-right:0px;
+    padding-top:10px;
+    padding-left:50px;
+    padding-right:5px;
+    
+}
+.flex-container2{
+    display:flex;
+    background-color: white;
+    height:60px;
+}
+.scroll2{
+    height:500px;
+    background-color: white;
+    border-top: 1px solid rgba(var(--b6a,219,219,219),1);
+    padding-left: 10px;
+
+}
+
+.scroll2 .story-profile{
+    width: 60px;
+    height:60px;
+    border-radius: 50%;
+    vertical-align: middle;
+    padding:2px;
+    
+}
+.scrollbar2{
+    height:500px;
+    overflow:auto;
+}
+.timelapse-message{
+    color:gray;
+    font-size:14px;
+    display:block;
+    margin-top:5px;
+}
+.active-chat{
+
+    display:block;
+    text-align: center;
+    padding-top:200px;
+    margin-left:0px;
+    width:550px;
+    border:1px solid rgba(var(--b6a,219,219,219),1);
+    border-radius: 0px 5px 5px 0px;
+    background-color: white;
+}
+.active-chat img{
+    width:100px;
+    height:100px;
+
+}
+.active-chat p{
+    line-height:1.5em;
+}
+.active-chat-message{
+    font-size:22px;
+}
+.active-chat button{
+    background-color:#1DA1F2;
+    border-radius:5px;
+    border:none;
+    margin-top:30px;
+    color:white;
+    font-weight:700;
+    font-size:14px;
+    padding:8px;
+}
+/* 
+================================================================================
+                                EXPLORE 
+================================================================================
+ */
+ .explore-main{
+    padding-left:210px;
+    padding-right:210px;
+    padding-top:30px;
+    margin-top:0px;
+    background-color:rgba(var(--b3f,250,250,250),1);
+
+ }
+.explore-suggest img{
+    width:50px;
+    height:50px;
+    border-radius:50%;
+}
+
+.title{
+    display:flex;
+
+    height:40px;
+}
+.title .gray{
+    color:gray;
+    margin-left:0px;
+    font-weight: 700;
+}
+.title .hashtag{
+    margin-right:40px;
+}
+.explore-suggestions{
+    height:210px;
+    margin-right:25px;
+    white-space:nowrap;
+    overflow-x:hidden;
+    overflow-y:hidden;
+
+}
+.explore-suggest{
+    display:inline-block;
+    background-color:white;
+    width:180px;
+    height:200px;
+    margin:10px;
+    padding:16px;
+    border:1px solid rgba(var(--b6a,219,219,219),1);
+    border-radius:4px;
+    text-align: center;
+    line-height: 1.5em;
+
+ 
+}
+.explore-suggest button{
+    font-size:14px;
+    padding:5px;
+    border-radius:4px;
+    background-color:#1DA1F2;
+    color:white;
+    font-weight:700;
+    border:none;
+    margin-top:20px;
+
+}
+.explore-heading{
+    margin-top:40px;
+
+
+}
+.explore-posts{
+
+
+}
+.explore-posts img{
+    display:inline-block;
+    width:295px;
+    height:300px;
+    margin:5px;
+ 
+}
+
+/*=================================================================
+                               PROFILE
+===================================================================
+*/
+
+.profile-main{
+        padding-left:200px;
+        padding-right:200px;
+        padding-top:30px;
+        margin-top:0px;
+        background-color:rgba(var(--b3f,250,250,250),1);
+    
+}
+.profile-top{
+    display:flex
+
+}
+.profile-image{
+    text-align: center;
+    vertical-align: middle;
+    margin-right:20px;
+    width:30%;
+}
+.profile-image img{
+    border-radius:50%;
+}
+.profile-info{
+    width:70%;
+    line-height:1.5em;
+    height:210px;
+    padding-top:10px;
+}
+.profile-flexcont{
+    display:flex;
+    vertical-align: baseline;
+    margin-bottom:30px;
+}
+.profile-info h1{
+    font-size:26px;
+    font-weight:400px;
+    margin-right: 0px;
+}
+.profile-button{
+
+    margin-right:10px;
+    margin-left:20px;
+}
+.profile-info button{
+    border-radius:4px;
+    border:none;
+    font-size:14px;
+    padding:3px;
+    margin-right:10px;
+    vertical-align: middle;
+}
+.followers p{
+    margin-right: 20px;
+}
+
+
+/*==============================================================================
+                                  PROFILE POSTS
+================================================================================
+*/
+.profile-main hr{
+    background-color:#d3d3d3;
+    height: 2px;
+}
+.profile-posts{
+    justify-content: center;
+}
+
+.profile-posts p{
+    font-size:16px;
+}
+.grid-posts img{
+    width:312px;
+    height:300px;
+    
+}
+
+.dropbtn{
+    
+}
+.dropdown{
+    float:right;
+    position: relative;
+    
+    
+    
+    
+}
+.dropdown a{
+    padding-top:0px;
+    padding-left:0px;
+    padding-right:0px;
+}
+.dropdown-content{
+    display:none;
+    position:absolute;
+    top: 20px;
+    right:40px;
+    width:500px;
+    height: 400px;
+    overflow:auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 2;
+}
+
+.dropdown-content a {
+    background-color: white;
+    float: none;
+    color: black;
+    padding: 12px 0px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    border-bottom:1px solid #d3d3d3 ;
+  }
+  .dropdown-content-post{
+    display:none;
+    position:absolute;
+    top: 50px;
+    right:0px;
+    width:500px;
+    height: 400px;
+    overflow:auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 2;
+}
+  .dropdown-content-post a {
+    background-color: white;
+    float: none;
+    color: black;
+    padding: 12px 0px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    border-bottom:1px solid #d3d3d3 ;
+    border-radius: 5px;
+  }
+  
+  .dropdown:hover .dropdown-content-post {
+    display: block;
+  }
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  .dropdown button{
+      background-color: white;
+      font-weight:700;
+  }
+  .dropdown-content a img{
+      width:40px;
+      height:30px;
+      border-radius:50%;
+  }
+  .dropdown-content tr{
+      padding:0px;
+      margin-top:10px;
+      margin-bottom:10px;
+      white-space: nowrap;
+  }
+
+  .dropdown-content td{
+      height:10px;
+  }
+  .followb-nav{
+      background-color:#1DA1F2 ;
+      color:white;
+      border-radius:4px;
+      text-align: center;
+      padding:15px;
+  }
+/*===========================================================================================
+                                        LIKES PAGE
+  ===========================================================================================
+   */
+  .likes{
+      display:none;
+  }
+
+.story-profile{
+    width:35px;
+    height:40px;
+    border-radius: 50%;
+    vertical-align: middle;
+    padding:2px;
+    border: 1px solid magenta;
+}
+.likes-table{
+    border-top: 1px solid rgb(235, 231, 231);
+    padding-top: 30px;
+      width:500px;
+      height:500px;
+      
+
+   
+    
+}
+.likes-table p{
+    display:inline-block;
+    width:300px;
+    padding-left:20px;
+    vertical-align: middle;
+    text-align: start;
+}
+.likes-followb{
+    display: inline-block;
+    background-color: #1DA1F2;
+    padding:10px;
+    border-radius: 5px;
+    color:white;
+    margin-left: 30px;
+    
+}
+.likes-info{
+    padding-top:10px;
+    padding-bottom:10px;
+    border:1px solid gray;
+    
+
+}
+
+div h1{
+    font-weight:700;
+    font-size:18px;
+    margin-bottom:20px;
+}
+.likes-post{
+    display: inline-block;
+    width:50px;
+    height:40px;
+    vertical-align:middle;
+    margin-left:40px;
+}
+.likes-following{
+    display: inline-block;
+    background-color: white;
+    padding:10px;
+    border-radius: 5px;
+    color:grey;
+    margin-left:30px;
+    border:1px solid grey;
+    width:70px;
+    font-size:13px;
+}
+button{
+    outline: none;
+}
